@@ -1,6 +1,11 @@
 # color
 
-A lightweight bash utility for colored output in your terminal. Supports multiple themes, modifiers (bold, dim, underline), and styled badges for common messaging patterns.
+A lightweight bash utility for colored terminal output. Includes a **`colors`** utility for easy scripting and a **`bg`** utility to quickly switch background colors for dark mode identification across terminals.
+
+## Utilities
+
+- **`colors`** — Apply colors and styles to any script with simple function calls
+- **`bg`** — Quickly switch terminal background colors (random, specific, or off) for dark mode
 
 ## Features
 
@@ -40,6 +45,20 @@ color theme pastel   # soft, readable colors (default)
 color theme monokai  # vibrant, high contrast
 color theme oldschool # classic terminal colors
 ```
+
+### Background color utility (bg.sh)
+
+When you have many terminal windows open, visually identifying each one can be difficult. `bg.sh` sets a random dark background color, making it easy to distinguish between terminals at a glance.
+
+```bash
+./bg.sh       # set a random dark background color
+./bg.sh off   # reset to default background
+./bg.sh red   # set a specific dark background color
+```
+
+Available colors: white, black, red, green, yellow, blue, purple, violet, silver, gray, cyan, magenta, pink, orange, teal, olive, moon, forest, sea, onyx
+
+> **Tip**: Add `source /path/to/bg.sh` to your shell config to use the `bg` command globally.
 
 ### Basic text coloring
 
